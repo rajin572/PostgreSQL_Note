@@ -142,7 +142,7 @@ ALTER TABLE "users" DROP COLUMN country;
 
 --## Rename a Column:
 
-ALTER TABLE "user" RENAME COLUMN demo to country;
+ALTER TABLE Employe RENAME COLUMN deparment_id to dept_id;
 
 ---------------------------
 
@@ -200,6 +200,8 @@ CREATE TABLE
         dept_name VARCHAR(250) NOT NULL
     );
 
+INSERT into Department (dept_name) VALUES ('Research');
+
 INSERT into
     Department (dept_name)
 VALUES ('IT'), ('Engeneering'), ('Accountent'), ('Management'), ('Finance');
@@ -216,6 +218,14 @@ CREATE TABLE
         age INT NOT NULL,
         deparment_id int,
         CONSTRAINT fk_constraint_id Foreign Key (deparment_id) REFERENCES Department(dept_id)
+    );
+
+INSERT INTO
+    Employe(emp_name, emp_email, age)
+VALUES (
+        'mahmuda',
+        'mahmuda@gmail.com',
+        23
     );
 
 INSERT into
@@ -339,5 +349,41 @@ SELECT * FROM employe WHERE emp_name LIKE '%a';
 -- show value that Specific Position with specific value on this column of this table
 
 SELECT * FROM employe WHERE emp_name LIKE '_a%';
+
+---------------------------
+
+--## Joining Between Two  Table:
+
+-- INNER JOIN
+
+SELECT *
+FROM employe
+    INNER JOIN department ON department.dept_id = employe.dept_id;
+
+-- LEFT JOIN
+
+SELECT *
+FROM employe
+    LEFT JOIN department ON department.dept_id = employe.dept_id;
+
+-- RIGHT JOIN
+
+SELECT *
+FROM employe
+    RIGHT JOIN department ON department.dept_id = employe.dept_id;
+
+-- FULL JOIN
+
+SELECT *
+FROM employe
+    FULL JOIN department ON department.dept_id = employe.dept_id;
+
+-- NATURAL JOIN
+
+SELECT * FROM employe NATURAL JOIN department;
+
+-- CROSS JOIN
+
+SELECT * FROM employe CROSS JOIN department;
 
 ---------------------------
