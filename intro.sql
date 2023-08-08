@@ -387,3 +387,44 @@ SELECT * FROM employe NATURAL JOIN department;
 SELECT * FROM employe CROSS JOIN department;
 
 ---------------------------
+
+--
+
+--
+
+-- _________________________Aggregation__________________;
+
+--
+
+--
+
+--## Aggregation
+
+-- AVG
+
+SELECT AVG(age) from employe;
+
+SELECT dept_id, AVG(age) from employe GROUP BY dept_id;
+
+-- MIN
+
+SELECT MIN(age) from employe;
+
+-- MAX
+
+SELECT MAX(age) from employe;
+
+-- practice
+
+SELECT
+    d.dept_name,
+    AVG(age),
+    SUM(age),
+    Max(age),
+    MIN(age),
+    COUNT(*)
+FROM employe e
+    FULL JOIN department d ON d.dept_id = e.dept_id
+GROUP BY dept_name;
+
+---------------------------
