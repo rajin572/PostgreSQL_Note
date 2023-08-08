@@ -72,12 +72,6 @@ ALTER TABLE student RENAME to learners;
 
 ---------------------------
 
---## Update Table:
-
---
-
----------------------------
-
 --## Delete Database:
 
 DROP TABLE "user";
@@ -234,7 +228,7 @@ INSERT into
 VALUES (
         'salman',
         'salman@gmail.com',
-        20,
+        26,
         1
     ), (
         'pathan',
@@ -327,5 +321,23 @@ SELECT * FROM employe WHERE emp_id IN (1,9,3);
 -- BETWEEN
 
 SELECT * FROM employe WHERE age BETWEEN 18 AND 25;
+
+-- Like
+
+-- show value anywhare on this column of this table
+
+SELECT * FROM employe WHERE emp_name LIKE '%a%';
+
+-- show value that Start with specific value on this column of this table
+
+SELECT * FROM employe WHERE emp_name LIKE 'a%';
+
+-- show value that end with specific value on this column of this table
+
+SELECT * FROM employe WHERE emp_name LIKE '%a';
+
+-- show value that Specific Position with specific value on this column of this table
+
+SELECT * FROM employe WHERE emp_name LIKE '_a%';
 
 ---------------------------
