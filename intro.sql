@@ -428,3 +428,48 @@ FROM employe e
 GROUP BY dept_name;
 
 ---------------------------
+
+--
+
+--
+
+-- _________________________Sub QUERYS__________________;
+
+--
+
+--
+
+SELECT *
+FROM employe
+WHERE age = (
+        SELECT MIN(age)
+        from employe
+    );
+
+SELECT emp_name, (
+        SELECT MIN(age)
+        from employe
+    )
+FROM employe;
+
+SELECT dept_id, avgAge
+From (
+        SELECT
+            dept_id,
+            avg(age) as avgAge
+        from employe
+        GROUP BY
+            dept_id
+    ) as tampTable;
+
+--
+
+--
+
+-- _________________________VIEWS__________________;
+
+--
+
+--
+
+CREATE VIEW view_table AS SELECT emp_name, age from employe ;
