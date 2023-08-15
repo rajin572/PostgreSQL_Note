@@ -12,39 +12,39 @@
 
 Questions and Answers
 
-1. What is PostgreSQL?
+1. What is PostgreSQL? <br/>
    => PostgreSQL is an open-source relational database management system (RDBMS) known for its extensibility, robustness, and support for advanced features. It uses SQL (Structured Query Language) for managing and querying data and provides features for data storage, retrieval, manipulation, and advanced analytics.
 
-2. Purpose of a Database Schema in PostgreSQL
+2. Purpose of a Database Schema in PostgreSQL <br/>
    => A database schema in PostgreSQL defines the structure, organization, and relationships of the database objects such as tables, views, indexes, and more. It acts as a blueprint for how data is stored and organized within the database, ensuring data integrity, security, and efficient management.
 
-3. Primary Key and Foreign Key Concepts
+3. Primary Key and Foreign Key Concepts <br/>
    => Primary Key: A primary key uniquely identifies each record in a table. It ensures data uniqueness and integrity. In PostgreSQL, primary keys are created using the PRIMARY KEY constraint.
    => Foreign Key: A foreign key establishes a relationship between tables. It references the primary key of another table, enforcing referential integrity. In PostgreSQL, foreign keys are defined using the REFERENCES clause.
-4. Difference Between VARCHAR and CHAR Data Types
+4. Difference Between VARCHAR and CHAR Data Types <br/>
    => VARCHAR: It stores variable-length strings. It's more efficient for storing strings with varying lengths.
    => CHAR: It stores fixed-length strings. It pads shorter strings with spaces. It's useful for fixed-length data storage.
-5. Purpose of WHERE Clause in SELECT Statement
+5. Purpose of WHERE Clause in SELECT Statement <br/>
    => The WHERE clause filters records in a SELECT statement based on specified conditions. It allows you to retrieve only the rows that meet the criteria you define.
 
-6. LIMIT and OFFSET Clauses
+6. LIMIT and OFFSET Clauses <br/>
    => LIMIT: It restricts the number of rows returned in a query result.
    => OFFSET: It specifies the number of rows to skip before starting to return rows. Used with LIMIT, it facilitates paginated results.
-7. Data Modification Using UPDATE Statements
+7. Data Modification Using UPDATE Statements <br/>
    => The UPDATE statement modifies existing records in a table. It allows you to change specific column values based on defined conditions.
 
-8. Significance of the JOIN Operation
+8. Significance of the JOIN Operation <br/>
    => The JOIN operation combines rows from two or more tables based on a related column. It allows you to retrieve data from multiple tables and establish relationships between them.
 
-9. GROUP BY Clause and Aggregation
+9. GROUP BY Clause and Aggregation <br/>
    => The GROUP BY clause is used with aggregate functions like COUNT, SUM, AVG, etc. It groups rows that have the same values in specified columns. Aggregates perform calculations on these groups.
 
-10. Calculating Aggregate Functions in PostgreSQL
+10. Calculating Aggregate Functions in PostgreSQL <br/>
     => Aggregate functions are used in combination with the GROUP BY clause to perform calculations on groups of data. Examples include COUNT, SUM, and AVG.
 
-11. Purpose of an Index
+11. Purpose of an Index <br/>
     => An index in PostgreSQL is a database object that improves query performance by allowing faster data retrieval. It's a data structure that provides quick access to rows based on indexed columns.
 
-12. PostgreSQL Views vs. Tables
+12. PostgreSQL Views vs. Tables <br/>
     => Tables: Store actual data.
     => Views: Virtual tables created from queries. They don't store data but provide an abstracted way to access and analyze data stored in tables.
