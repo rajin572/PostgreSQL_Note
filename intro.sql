@@ -12,7 +12,7 @@
 
 --## Create Database:
 
-CREATE DATABASE users;
+CREATE DATABASE assignment;
 
 ---------------------------
 
